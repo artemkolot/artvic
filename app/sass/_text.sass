@@ -1,0 +1,45 @@
+h2.secondary-title
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 36px
+    line-height: 44px
+    color: #1F2122
+    text-transform: uppercase
+    position: relative
+    margin-bottom: 24px
+    white-space: nowrap
+    z-index: 2
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        background: rgba(87, 175, 206, 0.58)
+        width: 56px
+        height: 14px
+        left: 36px
+        bottom: 0
+        z-index: -1
+
+p.standard
+    font-family: $Montserrat
+    font-style: normal
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    color: #8E9094
+    cursor: default
+
+@media ( max-width: 520px )
+    h2.secondary-title
+        font-size: 22px
+        line-height: 22px
+        &::before
+            width: 34.42px
+            height: 8.6px
+            left: 10px
+    p.standard
+        font-family: $Montserrat
+        font-size: 14px
+        line-height: 15px
+        color: #8E9094
+    

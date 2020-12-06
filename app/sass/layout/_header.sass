@@ -1,0 +1,102 @@
+header, .light-header
+    display: flex
+    justify-content: space-between
+    padding: 33px 0
+    font-family: $Montserrat
+    font-size: 16px
+    font-weight: 600
+    text-transform: uppercase
+    z-index: 3
+    position: relative
+    line-height: 16px !important
+    .menu
+        display: flex
+        line-height: 20px
+        @media ( max-width: 992px )
+            display: none
+    .menu-list
+        margin-right: 104px
+    .langs
+        font-weight: 500
+    ul
+        display: flex
+    li
+        margin: auto
+    a
+        position: relative
+        margin: auto
+        &:hover
+            text-decoration: none
+
+
+
+header
+    .menu-list li a
+        &:hover
+            &::after
+                width: 38px
+        &::after
+            width: 0
+            content: ''
+            display: block
+            position: absolute
+            left: -10px
+            bottom: 0
+            z-index: -1
+            /* Backface-visability fix bug with fantom 1px ::after element */
+            -webkit-backface-visibility: hidden 
+            backface-visibility: hidden
+            background: rgba(2, 72, 97, 1)
+            height: 14px
+            will-change: width
+            transition: width .3s
+
+.light-header
+    border-bottom: 1px solid #F1F1F1
+    padding: 33px 0
+    margin-bottom: 60px
+
+/* Menu list */
+header .menu-list li
+    margin-right: 43px
+    &:last-child
+        margin-right: 0
+
+header .menu-list li a
+    color: #fff
+
+.light-header .menu-list li
+    margin-right: 43px
+    &:last-child
+        margin-right: 0
+ 
+.light-header .menu-list a
+    color: #646A6E
+
+
+/* Languages list */
+header .langs li
+    margin-left: 6px
+    &:first-child
+        margin-left: 0
+
+header .langs li a
+    color: #3C3C3C
+    transition: color .5s
+    &.active,  &:hover
+        color: #fff
+
+.light-header .langs li
+    margin-left: 6px
+    &:first-child
+        margin-left: 0
+
+.light-header .langs a
+    color: #C6C6C6
+    transition: color .5s
+    &.active, &:hover
+        color: #646A6E
+
+
+
+

@@ -1,0 +1,97 @@
+footer
+    span.received
+        display: block
+        padding: 52px 0 27px 0
+        text-align: center
+        font-family: $Montserrat
+        font-size: 14px
+        font-weight: 300
+        color: rgba(227, 231, 234, 1)
+
+#contact-us
+    min-height: 100vh
+    height: 100%
+    .container
+        @media ( max-width: 991px )
+            padding: 0
+            
+    .light-header
+        margin-bottom: 0
+        @media ( max-width: 991px )
+            padding: 33px 0
+    .wrapper
+        display: flex
+        flex-wrap: wrap
+    .left-side
+        background: #F6F8F9
+        width: 40%
+        height: 100%
+        padding: 115px 124px 133px 103px
+        @media (max-width: 1200px)
+            width: 50%
+        @media ( max-width: 991px  )
+            flex: 100%
+            padding: 70px 40px 100px 20px
+        .contact-form
+            form
+                margin-top: 20px
+                .form-control
+                    margin-bottom: 50px
+                    position: relative
+                    input
+                        width: 100%
+                        background: transparent
+                        border: 0
+                        border-bottom: 1px solid #E6E6E6
+                        font-family: $Montserrat
+                        font-weight: 400
+                        font-size: 16px
+                        padding-left: 15px
+                        &:focus, &.activated
+                            &+label
+                                bottom: 100%
+                                font-size: 14px
+                                color: #6D6D6D
+                    label
+                        position: absolute
+                        font-family: $Montserrat
+                        font-weight: 400
+                        font-size: 16px
+                        font-size: 16px
+                        color: #1D1F20
+                        margin-bottom: 0
+                        bottom: 0
+                        left: 0
+                        transition: .5s
+                .submit
+                    padding-left: 30px
+    .right-side
+        background: url('../img/src/Country1.png') no-repeat, url('../img/src/Country2.png') no-repeat, url('../img/src/Country3.png') no-repeat
+        background-position: 19% 80%, 89% 76%, 50% -15%
+        @media (max-width: 1200px)
+            background-position: 0% 80%, 125% 62%, 50% -15%
+        @media ( max-width: 991px  )
+            padding: 175px 0
+        display: flex
+        justify-content: center
+        align-items: center
+        flex: 1
+        ul.contacts-list
+            margin: 0
+            padding: 0
+            li
+                display: flex
+                flex-direction: column
+                list-style: none
+                font-family: $Montserrat
+                margin-bottom: 60px
+                span
+                    font-weight: 600
+                    font-size: 28px
+                    color: rgba(69, 74, 78, 1)
+                a
+                    font-size: 22px
+                    font-style: normal
+                    font-weight: 300
+                    color: #898989
+                    text-decoration: none

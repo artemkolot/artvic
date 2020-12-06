@@ -1,0 +1,307 @@
+@import config
+@import fonts
+@import buttons
+@import text
+@import pageslider
+@import layout/footer
+@import layout/header
+@import components/flipcard
+
+// CUSTOM USER STYLES & IMPORTS
+.container
+    max-width: 1240px
+
+.section-info
+    padding-left: 40px
+    @media (max-width: 767px) 
+        padding-left: 20px
+
+.time-line
+    display: flex
+    align-items: center
+    font-family: Montserrat
+    font-size: 19.2px
+    font-weight: 600
+    color: #6C6C6C
+    margin-bottom: 30px
+    .dash
+        width: 64px
+        height: 0px
+        display: block
+        margin: 0 18px
+        border-top: 0.7px solid #5C5C5C
+    &.light
+        color: rgba(78,100,111,0.28)
+        .dash
+            border-color: rgba(223, 225, 231, 1)
+#top-info
+    display: flex
+    flex-direction: column
+    position: relative
+    min-height: 100vh
+    height: 100%
+    overflow: hidden
+    .gradient
+        pointer-events: none
+        position: absolute
+        top: 0
+        right: 0 
+        left: 0
+        bottom: 0
+        z-index: -1
+        background: linear-gradient(107.19deg, rgba(31, 33, 34, 0.99) 2.14%, rgba(31, 33, 34, 0.98) 28.18%, rgba(31, 33, 34, 0.92) 41.3%, rgba(31, 33, 34, 0.92) 94.91%)
+        background-size: cover, auto 100%
+    .ARTVIC
+        position: relative
+        &::after
+            content: "ARTVIC"
+            position: absolute
+            right: -23%
+            bottom: 60% // 283px
+            letter-spacing: 15px
+            transform: rotate(-90deg)
+            font-family: $Montserrat
+            font-weight: 900
+            font-size: 230px
+            line-height: 230px
+            color: rgba(78, 80, 82, 0.15)
+            z-index: -1
+            @media ( max-width: 1000px )
+                display: none
+                
+
+    video
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 
+        right: 0
+        z-index: -2
+        min-width: 100%
+        min-height: 100%
+        @media (max-width: 540px)
+            width: auto
+            height: 100%
+    .title
+        margin-bottom: 40px
+        h1
+            font-family: $Montserrat
+            font-weight: 800
+            color: #F0F0F0
+            font-size: 129px
+            line-height: 129px
+            text-transform: uppercase
+            margin-bottom: 10px
+            position: relative
+            @media (max-width: 720px)
+                font-size: 85px
+                line-height: 85px
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                background: #00567A
+                width: 159px
+                height: 35px
+                left: 41px
+                bottom: 0
+                z-index: -1
+                @media (max-width: 720px)
+                    width: 105.89px
+                    height: 23.31px
+                    left: 30px
+
+        h2
+            font-family: $Montserrat
+            font-weight: 600
+            font-size: 54px
+            line-height: 54px
+            color: #46494A
+            padding-left: 41px
+            margin-bottom: 0
+            @media (max-width: 720px)
+                font-size: 35px
+                padding-left: 30px
+
+// .break 
+//     flex-basis: 100%
+//     height: 0
+//     &.md
+//         @media ( max-width: 1200px )
+//             display: none
+
+#our-specializtion
+    min-height: 100vh
+    background: #F9F9F9
+    padding-bottom: 60px
+    .cards
+        display: flex
+        flex-wrap: wrap
+        margin-top: 50px
+        position: relative
+        z-index: 2
+        &::after
+            content: '02'
+            position: absolute
+            right: -80px
+            bottom: -150px
+            font-family: $Montserrat
+            font-weight: 800
+            font-size: 280px
+            line-height: 280px
+            color: transparent
+            -webkit-text-stroke-width: 2px
+            -webkit-text-stroke-color: #fff
+            z-index: -1
+            @media (max-width: 1270px)
+                display: none
+        .card
+            display: flex
+            position: relative
+            flex: 1
+            min-width: 290px
+            margin: 10px 10px
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            background: #FFFFFF
+            // box-shadow: 0px 20px 30px rgba(205, 210, 217, 0.51)
+            border-radius: 4px
+            text-align: center
+            // height: 283px
+            transition: .5s
+            overflow: hidden
+            cursor: default
+            .hide-text
+                position: absolute
+                transition: .5s
+                // outline: 1px solid red
+                background: rgba(255,255,255, 1)
+                padding: 0 30px 30px
+                display: flex
+                flex-direction: column
+                align-self: center
+                justify-content: center
+                top: 100%
+                left: 0
+                right: 0
+                height: 100%
+            &:hover
+                box-shadow: 0px 20px 30px rgba(205, 210, 217, 0.51)
+                .card-image
+                    bottom: 100%
+                .hide-text
+                    top: 0
+            .card-image
+                margin-bottom: 15px
+                transition: .5s
+                position: relative
+                bottom: 0
+            .card-title
+                font-family: $Montserrat
+                position: relative
+                font-style: normal
+                font-weight: 600
+                font-size: 22px
+                line-height: 22px
+                color: rgba(78, 78, 78, 0.8)
+                margin: 15px 0
+
+
+            .card-text
+                p
+                    display: inline-block
+                    width: 200px
+
+
+#why-us
+    // min-height: 100vh
+    background: url('../img/src/ARTVIC-horizont.png') no-repeat
+    background-position: right 40%
+    @media (max-width: 992px)
+        background: url('../img/src/ARTVIC-vertical.png') no-repeat
+        background-position: right bottom
+
+#why-us .cards
+    display: flex
+    flex-wrap: wrap
+    position: relative
+    &::after
+        content: '03'
+        width: 350px
+        height: 335px
+        position: absolute
+        right: -70px
+        bottom: -30px
+        font-family: $Montserrat
+        font-weight: 800
+        font-size: 280px
+        line-height: 280px
+        color: #fff
+        -webkit-text-stroke-width: 2px
+        -webkit-text-stroke-color: rgba(244, 244, 244, 0.54)
+        z-index: -1
+
+#why-us .card
+    cursor: default
+    min-width: 303px
+    max-width: 303px
+    padding: 12px 42px 28px 42px
+    margin-bottom: 30px
+    margin-right: 7%
+    display: flex
+    flex: 1 1 auto
+    flex-direction: column
+    justify-content: space-evenly
+    background: transparent
+    transition: all .5s
+    &.active
+        cursor: default
+        background: #F9F9F9
+        box-shadow: 0px 10px 21px rgba(205, 210, 217, 0.31)
+        border-radius: 4px
+
+#why-us .card
+    h3
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 22px
+        line-height: 27px
+        color: #393D41
+        margin-bottom: 10px
+    p
+        font-size: 14px
+
+@media ( max-width: 1200px )
+    #why-us .cards
+        justify-content: space-evenly
+    #why-us .card
+        margin-right: 0
+
+@media ( max-width: 992px )
+    #why-us .cards
+        &::after
+            content: ''
+            display: none
+
+
+@media ( max-width: 520px )
+    #why-us .cards
+        &::after
+            display: none
+    #why-us .card
+        flex-direction: row
+        padding: 0
+        min-width: 100%
+        p
+            font-size: 13px
+        h3
+            font-size: 18px
+            line-height: 22px
+        .card-image
+            max-width: 60px
+            width: 100%
+            margin-right: 10px
+            img
+                // width: 100%
+                height: auto
