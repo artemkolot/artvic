@@ -1,0 +1,64 @@
+main.light-bg
+    background:#fff
+
+.about-us-main
+    max-width: 1050px
+    position: relative
+    z-index: 2
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        right: -40%
+        top: 20%
+        background: #F6F8F9
+        width: 780px
+        height: 940px
+        z-index: -1
+        @media ( max-width: 1170px  )
+           display: none 
+    
+.team-members
+    display: flex
+    flex-wrap: wrap
+    margin-top: 85px
+    justify-content: start
+    @media ( max-width: 1200px )
+        justify-content: space-evenly
+        .member-card
+            margin: 22px 10px
+        
+.member-card
+    margin-bottom: 110px
+    margin-right: 25px
+    text-transform: uppercase
+    font-family: $Montserrat
+    max-width: 236px
+    width: 100%
+    .photo
+        border-radius: 5px
+        overflow: hidden
+        display: flex
+        justify-content: center
+        align-items: end
+        margin-bottom: 10px
+        height: 318px
+        -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, transparent) , to(rgba(250, 250, 250, 0.2)))
+    .name
+        font-weight: 600
+        font-size: 22px
+        line-height: 27px
+        color: rgba(78, 78, 78, 0.79)
+    .position
+        font-weight: 500
+        font-size: 14px
+        line-height: 17px
+        color: rgba(100, 106, 110, 0.32)
+        i
+            display: block
+            width: 100%
+
+.team-text
+    display: flex
+    flex-direction: column
+    justify-content: space-between

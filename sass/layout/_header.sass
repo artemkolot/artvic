@@ -8,7 +8,13 @@ header, .light-header
     text-transform: uppercase
     z-index: 3
     position: relative
+    background: transparent
     line-height: 16px !important
+    &.fixed-header
+        position: fixed
+        right: 15px
+        left: 15px
+        z-index: 9999
     .menu
         display: flex
         line-height: 20px
@@ -16,6 +22,8 @@ header, .light-header
             display: none
     .menu-list
         margin-right: 104px
+        @media ( max-width: 992px )
+            margin-right: 0
     .langs
         font-weight: 500
     ul
@@ -55,6 +63,8 @@ header
     border-bottom: 1px solid #F1F1F1
     padding: 33px 0
     margin-bottom: 60px
+    &.sky
+        border: 0
 
 /* Menu list */
 header .menu-list li
@@ -96,7 +106,5 @@ header .langs li a
     transition: color .5s
     &.active, &:hover
         color: #646A6E
-
-
 
 

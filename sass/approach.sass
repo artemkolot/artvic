@@ -1,0 +1,154 @@
+.approach-wrapper
+    display: flex
+    @media ( max-width: 767px )
+        margin: 0 -15px
+
+aside
+    width: 50%
+    min-width: 60px
+    max-width: 472px
+    width: 100%
+    @media ( max-width: 767px )
+        width: 60px !important
+
+main.approuch-main
+    flex-grow: 1
+    background: rgba(246, 248, 249, 1)
+    
+.approach-menu
+    height: 100%
+    text-align: center
+
+
+.approach-menu ul.menu-list
+    position: sticky
+    top: 115px
+    display: inline-block
+    text-align: left
+    margin-top: 115px
+    margin-bottom: 115px
+    @media ( max-width: 767px )
+        text-align: center
+
+
+.approach-menu ul.menu-list li
+    margin-bottom: 30px
+    &.active
+        span
+            color: rgba(78, 78, 78, 1)
+            transition: .6s
+            &::before
+                content: ''
+                position: absolute
+                background: rgba(169, 223, 242, 1)
+                width: 15px
+                height: 15px
+                right: -3px
+                bottom: -2px
+                z-index: -1
+        a
+            font-weight: 600
+            color: rgba(78, 78, 78, 1)
+
+
+.approach-menu ul.menu-list li a
+    font-family: $Montserrat
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    text-transform: capitalize
+    color: #848484
+    text-decoration: none
+    @media ( max-width: 1060px )
+        display: none
+
+.approach-menu ul.menu-list li span
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 19px
+    line-height: 24px
+    color: rgba(201, 207, 210, 1)
+    text-transform: capitalize
+    margin-right: 20px
+    position: relative
+    cursor: pointer
+    @media ( max-width: 767px )
+        margin: 0
+
+.approach-cards
+    padding: 124px
+    padding-bottom: 0
+    @media ( max-width: 1060px )
+        padding: 57px 31px
+
+
+.approach-card
+    display: flex
+    margin-bottom: 200px
+    @media ( max-width: 768px )
+        margin-bottom: 100px
+        flex-wrap: wrap
+        justify-content: center
+        
+
+
+.approach-card .section-info
+    padding-left: 0
+
+
+.approach-card .collapse-list
+    margin: 0 auto
+    width: 300px
+    @media ( max-width: 768px )
+        width: 100%
+
+
+.approach-card .collapse-list ul
+    font-family: $Montserrat
+    margin-top: 42px
+    li
+        position: relative
+        cursor: pointer
+        margin-bottom: 20px
+        &::before
+            content: '+'
+            position: absolute
+            top: 0
+            left: -34px
+            color: #C9CFD2
+            font-size: 25px
+            line-height: 25px
+            @media ( max-width: 521px )
+                font-size: 20px
+                line-height: 20px
+                left: -20px
+        &.active
+            &::before
+                content: '-'
+            p
+                height: 120px
+            span
+                margin-bottom: 24px
+    span
+        display: block
+        font-size: 18px
+        line-height: 22px
+        font-weight: 500
+        color:  #646A6E
+        border-bottom: 1px solid rgba(201, 207, 210, 0.51)
+        padding-bottom: 6px
+        transition: .3s linear
+    p
+        font-size: 14px
+        line-height: 17px
+        color: #8F8F8F
+        display: block
+        height: 0
+        overflow: hidden
+        transition: height .3s linear
+    @media ( max-width: 521px )
+        span
+            font-size: 14px
+        p
+            font-size: 12px

@@ -1,0 +1,105 @@
+.mobile-menu
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: start
+    position: fixed
+    width: 100%
+    height: 100vh
+    background: #202223
+    top: 0
+    left: 100%
+    z-index: 4
+    color: #fff
+    overscroll-behavior: contain
+    scroll-behavior: unset
+    overflow: hidden
+    transition: .2s
+
+.mobile-menu.active
+    left: 0
+
+
+.mobile-menu ul
+    width: 100%
+
+
+/* Languages list */
+.mobile-menu .langs
+    display: flex
+    margin-left: 44px
+    margin-bottom: 90px
+
+.mobile-menu .langs li
+    margin-left: 6px
+    &:first-child
+        margin-left: 0
+
+.mobile-menu .langs li a
+    font-family: $Montserrat
+    font-weight: 500
+    font-size: 18px
+    line-height: 20px
+    text-transform: uppercase
+    color: #3C3C3C
+    transition: color .5s
+    text-decoration: none
+    &.active,  &:hover
+        color: #fff
+
+
+.mobile-menu .mobile-menu-list
+    padding-left: 66px
+    margin-bottom: 90px
+
+.mobile-menu-list
+    #contact-us-link
+        display: none
+        &.active
+            display: block
+    @media ( min-width: 992px )
+        display: none
+
+    
+
+.mobile-menu .mobile-menu-list li
+    position: relative
+    margin-bottom: 30px
+    &:last-child
+        margin-bottom: 0
+        
+.mobile-menu-list li.active
+    span
+        color: #fff
+        &::before
+            content: ''
+            position: absolute
+            background: #00567A
+            width: 15px
+            height: 15px
+            right: -3px
+            bottom: -2px
+            z-index: -1
+
+.mobile-menu-list li a
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 24px
+    line-height: 29px
+    text-transform: uppercase
+    color: #FFFFFF
+    margin-bottom: 30px
+    text-decoration: none
+
+.mobile-menu-list li span
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 19px
+    line-height: 24px
+    color: #4E5052
+    text-transform: capitalize
+    margin-right: 15px
+    position: relative
+
+.mobile-menu .btn
+    margin-left: 70px

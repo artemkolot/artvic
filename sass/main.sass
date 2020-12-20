@@ -3,11 +3,21 @@
 @import buttons
 @import text
 @import pageslider
+@import components/burger
 @import layout/footer
 @import layout/header
 @import components/flipcard
+@import components/mobile_menu
+@import approach
+@import aboutus
 
 // CUSTOM USER STYLES & IMPORTS
+.ofx-h
+    overflow-x: hidden
+.body
+    position: relative
+    background: #fff
+    
 .container
     max-width: 1240px
 
@@ -48,11 +58,20 @@
         right: 0 
         left: 0
         bottom: 0
-        z-index: -1
+        z-index: 1
         background: linear-gradient(107.19deg, rgba(31, 33, 34, 0.99) 2.14%, rgba(31, 33, 34, 0.98) 28.18%, rgba(31, 33, 34, 0.92) 41.3%, rgba(31, 33, 34, 0.92) 94.91%)
         background-size: cover, auto 100%
+        &.light
+            background: url('../img/src/approach.png') no-repeat center
+            background-size: cover
+    &.about-us
+        .gradient
+            background: url('../img/src/about-us-bg.png') no-repeat center
+            background-size: cover
+
     .ARTVIC
         position: relative
+        z-index: 2
         &::after
             content: "ARTVIC"
             position: absolute
@@ -68,7 +87,10 @@
             z-index: -1
             @media ( max-width: 1000px )
                 display: none
-                
+        &.sky
+            &::after
+                color: rgba(226, 236, 241, 0.34)
+                // backdrop-filter: blur(8.73532px)
 
     video
         position: absolute
@@ -76,70 +98,37 @@
         bottom: 0
         left: 
         right: 0
-        z-index: -2
         min-width: 100%
         min-height: 100%
         @media (max-width: 540px)
             width: auto
             height: 100%
-    .title
-        margin-bottom: 40px
-        h1
-            font-family: $Montserrat
-            font-weight: 800
-            color: #F0F0F0
-            font-size: 129px
-            line-height: 129px
-            text-transform: uppercase
-            margin-bottom: 10px
-            position: relative
-            @media (max-width: 720px)
-                font-size: 85px
-                line-height: 85px
-            &:before
-                content: ''
-                display: block
-                position: absolute
-                background: #00567A
-                width: 159px
-                height: 35px
-                left: 41px
-                bottom: 0
-                z-index: -1
-                @media (max-width: 720px)
-                    width: 105.89px
-                    height: 23.31px
-                    left: 30px
 
-        h2
-            font-family: $Montserrat
-            font-weight: 600
-            font-size: 54px
-            line-height: 54px
-            color: #46494A
-            padding-left: 41px
-            margin-bottom: 0
-            @media (max-width: 720px)
-                font-size: 35px
-                padding-left: 30px
-
-// .break 
-//     flex-basis: 100%
-//     height: 0
-//     &.md
-//         @media ( max-width: 1200px )
-//             display: none
-
+/* OUR SPECIALIZATION =========================================== */
 #our-specializtion
     min-height: 100vh
     background: #F9F9F9
     padding-bottom: 60px
+    .specializtion-text
+        padding-left: 40px
+        width: 60%
+        @media (max-width: 1200px)
+            width: 100%
+        @media (max-width: 991px)
+            padding: 0
     .cards
-        display: flex
-        flex-wrap: wrap
-        margin-top: 50px
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(287px, 1fr))
+        grid-gap: 20px
+        margin-top: 64px
         position: relative
         z-index: 2
+        @media ( max-width: 1255px)
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 50% 50%
+        @media (max-width: 767px)
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(4, 1fr)
         &::after
             content: '02'
             position: absolute
@@ -155,43 +144,6 @@
             z-index: -1
             @media (max-width: 1270px)
                 display: none
-        .card
-            display: flex
-            position: relative
-            flex: 1
-            min-width: 290px
-            margin: 10px 10px
-            flex-direction: column
-            justify-content: center
-            align-items: center
-            background: #FFFFFF
-            // box-shadow: 0px 20px 30px rgba(205, 210, 217, 0.51)
-            border-radius: 4px
-            text-align: center
-            // height: 283px
-            transition: .5s
-            overflow: hidden
-            cursor: default
-            .hide-text
-                position: absolute
-                transition: .5s
-                // outline: 1px solid red
-                background: rgba(255,255,255, 1)
-                padding: 0 30px 30px
-                display: flex
-                flex-direction: column
-                align-self: center
-                justify-content: center
-                top: 100%
-                left: 0
-                right: 0
-                height: 100%
-            &:hover
-                box-shadow: 0px 20px 30px rgba(205, 210, 217, 0.51)
-                .card-image
-                    bottom: 100%
-                .hide-text
-                    top: 0
             .card-image
                 margin-bottom: 15px
                 transition: .5s
@@ -206,6 +158,7 @@
                 line-height: 22px
                 color: rgba(78, 78, 78, 0.8)
                 margin: 15px 0
+                text-align: center
 
 
             .card-text
@@ -216,7 +169,7 @@
 
 #why-us
     // min-height: 100vh
-    background: url('../img/src/ARTVIC-horizont.png') no-repeat
+    background: url('../img/src/ARTVIC-horizont.png') no-repeat, #fff
     background-position: right 40%
     @media (max-width: 992px)
         background: url('../img/src/ARTVIC-vertical.png') no-repeat
@@ -291,7 +244,8 @@
             display: none
     #why-us .card
         flex-direction: row
-        padding: 0
+        padding: 15px 25px
+        margin-top: 65px
         min-width: 100%
         p
             font-size: 13px
@@ -301,7 +255,7 @@
         .card-image
             max-width: 60px
             width: 100%
-            margin-right: 10px
+            margin-right: 20px
             img
                 // width: 100%
                 height: auto
